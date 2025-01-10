@@ -1,12 +1,13 @@
 services:
-  manager:
-    build: .
-    ports:
-      - '2323:2323'
-    depends_on:
-      - postgres
-    environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/photo_arxiu
+#  manager:
+#    build: manager
+#    ports:
+#      - '2323:2323'
+#    depends_on:
+#      - postgres
+#    environment:
+#      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/photo_arxiu
+
 
   postgres:
     image: 'postgres:latest'

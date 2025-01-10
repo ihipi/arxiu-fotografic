@@ -4,10 +4,16 @@ server:
 spring:
   application:
     name: manager
-
+  liquibase:
+    default-schema: photo_arxiu
+    enabled: true
+    url: jdbc:postgresql://localhost:5432/photo_arxiu?currentSchema=photo_arxiu
+    user: myuser
+    password: secret
+    liquibase-schema: photo_arxiu
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/photo_arxiu
+    url: jdbc:postgresql://localhost:5432/photo_arxiu?currentSchema=photo_arxiu
     driverClassName: org.postgresql.Driver
     username: myuser
     password: secret
